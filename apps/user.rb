@@ -1,10 +1,10 @@
-class user
+class User
 
   attr_reader :username
-  
+
   @@all = []
 
-  def initialize (:username)
+  def initialize (username)
     @username = username
     @@all << self
   end
