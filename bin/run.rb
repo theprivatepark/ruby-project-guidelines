@@ -6,3 +6,5 @@ require_relative '../apps/userdrinks.rb'
 
 
 puts "HELLO WORLD"
+
+binding.pry
