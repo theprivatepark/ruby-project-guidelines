@@ -4,7 +4,7 @@ class User
 
   @@all = []
 
-  def initialize (username)
+  def initialize(username)
     @username = username
     @@all << self
   end
