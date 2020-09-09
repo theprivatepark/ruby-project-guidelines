@@ -1,4 +1,4 @@
-class Alcohol
+class Alcohol < ActiveRecord::Base
 
   attr_reader :name, :type, :alcohol_percentage
 

@@ -1,4 +1,4 @@
-class UserAlcohol
+class UserAlcohol < ActiveRecord::Base
     
     attr_reader :user_id, :drink_id
     attr_writer :rating
