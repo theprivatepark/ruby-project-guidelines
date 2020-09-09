@@ -1,10 +1,10 @@
 class UserAlcohol
-
+    
     attr_reader :user_id, :drink_id
     attr_writer :rating
 
     @@all = []
-
+    
     def initialize(user_id, drink_id, rating=nil)
         @user_id = user_id
         @drink_id = drink_id
@@ -13,7 +13,7 @@ class UserAlcohol
     end
 
     def self.all 
-    @@all
+        @@all
     end
 
 end
