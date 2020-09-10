@@ -1,19 +1,6 @@
 class User < ActiveRecord::Base 
 
-  attr_reader :username
-
-  @@all = []
-
-  def initialize(username)
-    @username = username
-    @@all << self
-  end
-
-  def self.all
-    @@all
-  end
-
-
-
+has_many :useralcohols
+has_many :alcohols, through: :useralcohols
 
 end

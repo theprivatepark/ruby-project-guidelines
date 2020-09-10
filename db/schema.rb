@@ -12,6 +12,18 @@
 
 ActiveRecord::Schema.define(version: 2020_09_09_131642) do
 
+  create_table "alcohols", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.integer "alcohol_percentage"
+  end
+
+  create_table "useralcohols", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "alcohol_id"
+    t.integer "rating"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
   end
