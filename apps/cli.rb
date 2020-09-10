@@ -1,43 +1,42 @@
-def welcome 
-    puts "Please input your username."
-    user_input = gets.chomp
-    puts "#{user_input}, welcome to Alcoholics Not Anonymous!"
-  end
-  
-  def current_list?
-    puts "Do you want to see your current drink list? (Yes/No)" 
-    user_input = gets.chomp
-    if user_input == "Yes" 
-      puts "FUCKING LIST"
-    else
-      puts "FUCK YOU TOO"
-    end
-  end
-  
-  def favorites_list
-    puts "Do you want to see your favorites list? (Yes/No)"
-    user_input = gets.chomp
-    if user_input == "Yes"
-      puts "HERE'S YOUR FUCKING FAV LIST"
-    else
-      puts "FUCK YOU AGAIN"
-    end
-  end
-  
-  def wish_list
-    puts "Do you want to see your wish list? (Yes/No)"
-    user_input = gets.chomp
-    if user_input == "Yes"
-      puts "HERE'S YOUR WISH LIST BITCH"
-    else
-      puts "FUCK U 2"
-    end
-  end
+require 'pry'
 
-  welcome
-  current_list?
-  wish_list
-  favorites_list
- 
+def welcome
+
+  puts "Welcome! Do you have an account?(Yes/No)"
+  user_input = STDIN.gets.chomp
+  if user_input == "Yes"
+    puts "Please enter your username."
+    username = STDIN.gets.chomp
+  elsif 
+    username == "No"
+    puts "Please enter your new username."
+    username = STDIN.gets.chomp
+    puts "Welcome #{username}!"
+  else 
+    puts "Invalid Entry."
+    welcome
+  end  
+
+end
+
+def menu
+  # puts 
+  # "1. View/Edit wishlist
+  #  2. View/Edit current drink list
+  #  3. View/Edit favorites"
+
+   puts 'Select and Alcohol Using Number'
+
+   Alcohol.all.each_with_index {|alc, index|
+    puts "#{index + 1}: #{alc.name}"
+  }
+
+  selected_alcohol = STDIN.gets.chomp.to_i - 1
+
+  puts "You have selected: #{Alcohol.all[selected_alcohol].name}"
+end
   
+
+welcome
+menu
   
