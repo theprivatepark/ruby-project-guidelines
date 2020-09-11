@@ -13,4 +13,3 @@ Alcohol.create(name: "Hennessy")
 Alcohol.create(name: "Patron")
 Alcohol.create(name: "Jose Cuervo")
 Alcohol.create(name: "Titos")
-
